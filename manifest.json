@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Mnemonic: AI-Powered Memory Assistant",
+  "version": "1.0",
+  "description": "Transform your browsing history into an intelligent memory partner using Chrome's built-in AI APIs",
+  "permissions": ["activeTab", "history", "storage", "tabs", "contextMenus", "notifications", "scripting", "sidePanel", "webNavigation"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "trial_tokens": [
+    "Al1GPcZn8ZmHfyEoHJZdpjht9WSxjjYPtDMPA75qfzBLcyr8c99yHCLwNFz3o8RWVQUBAk4ddZnhwytbSb9AcQsAAAB7eyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vY2praG9sY2hnZ2hhbmFiamppbm1lYmptZ2NqY2lrYXAiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDB9",
+    "A6bqDWB2rsItbn8hWDn4ZJoiCbRbToBSXqhGv9WMIxA+a8i4Y05tGZP0KoHDk3hXRc/fxh6Ip8wY3vZuz6h5pgIAAACMeyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vY2praG9sY2hnZ2hhbmFiamppbm1lYmptZ2NqY2lrYXAiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElGb3JFeHRlbnNpb24iLCJleHBpcnkiOjE3NjA0ODYzOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=",
+    "A2TPFxG9b/MDIe52Qs7FE8Dj+PR3ESjuFjFXJ2qWQblois/wgjwXVtMC7E8ciAhU+qj74gUgXbK0D86lSjUpmAEAAACCeyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vY2praG9sY2hnZ2hhbmFiamppbm1lYmptZ2NqY2lrYXAiLCJmZWF0dXJlIjoiQUlSZXdyaXRlckFQSSIsImV4cGlyeSI6MTc2OTQ3MjAwMCwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==", 
+    "A/lpboMUb3BtfXeV7Q+D+2ltWUrwIgrSgJCAUga3asjPtz2JG5zJELIbHPz8s7wy7vLOuKQQD8CMvpLH5LwQDwEAAACAeyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vY2praG9sY2hnZ2hhbmFiamppbm1lYmptZ2NqY2lrYXAiLCJmZWF0dXJlIjoiQUlXcml0ZXJBUEkiLCJleHBpcnkiOjE3Njk0NzIwMDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=",
+    "A+Px6m+JmJBOXjSESUGfm5qCfe569jlVx+TZ4Mi21c7PYcMa+iSp1UrcHQ6ydNfHjTGlG5TovlTNzO0kQ1FGRQMAAACHeyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vY2praG9sY2hnZ2hhbmFiamppbm1lYmptZ2NqY2lrYXAiLCJmZWF0dXJlIjoiQUlTdW1tYXJpemF0aW9uQVBJIiwiZXhwaXJ5IjoxNzYwNDAwMDAwLCJpc1RoaXJkUGFydHkiOnRydWV9"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["history-page.html"],
+    "matches": ["<all_urls>"]
+  }],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; object-src 'self'"
+  },
+  "action": {
+    "default_title": "Chrome Mnemonic"
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  }
+}

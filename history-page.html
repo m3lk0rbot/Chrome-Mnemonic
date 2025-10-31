@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Enhanced History</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+      min-height: 100vh;
+      color: #0f172a;
+    }
+
+    h1 {
+      color: #0ea5e9;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button {
+      padding: 14px 24px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(14, 165, 233, 0.25);
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(14, 165, 233, 0.35);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    #result {
+      margin-top: 30px;
+      padding: 24px;
+      background: white;
+      border-radius: 16px;
+      white-space: pre-line;
+      line-height: 1.6;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #0f172a;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI-Powered Browser History</h1>
+  <div class="button-group">
+    <button id="analyzeBtn">🔍 Analyze History</button>
+    <button id="summarizeBtn">📝 Summarize Patterns</button>
+    <button id="suggestBtn">💡 Get Suggestions</button>
+    <button id="translateBtn">🌐 Translate Analysis</button>
+    <button id="debugBtn">🔧 Check AI Status</button>
+  </div>
+  <div id="result">Click any button to start AI-powered analysis</div>
+  
+  <script src="history-page.js"></script>
+</body>
+</html>

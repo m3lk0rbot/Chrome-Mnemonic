@@ -1,0 +1,42 @@
+{
+  "name": "chrome-mnemonic",
+  "version": "1.0.0",
+  "description": "AI-Powered Memory Assistant Chrome Extension",
+  "main": "popup.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "eslint": "^8.57.0",
+    "@types/chrome": "^0.0.254"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "services/**/*.js",
+      "features/**/*.js",
+      "utils/**/*.js",
+      "!**/node_modules/**"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": ["text", "lcov", "html"]
+  },
+  "keywords": [
+    "chrome-extension",
+    "ai",
+    "browsing-history",
+    "memory-assistant"
+  ],
+  "author": "Chrome Mnemonic Team",
+  "license": "MIT"
+}
