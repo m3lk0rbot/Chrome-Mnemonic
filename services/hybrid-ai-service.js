@@ -36,17 +36,6 @@ class HybridAIService {
       const result = await chrome.storage.local.get(['useGemini', 'geminiApiKey']);
       this.useGemini = result.useGemini || false;
       this.geminiApiKey = result.geminiApiKey || null;
-      
-      // If no key exists, use default demo key for hackathon
-      // NOTE: This is for hackathon demo only - users should replace with their own key in Settings
-      if (!this.geminiApiKey) {
-        // Default demo API key for hackathon (from project)
-        const DEFAULT_DEMO_KEY = 'AIzaSyDrs3pbfeZ_rqoRGQQudptpbAm7f5o171o';
-        this.geminiApiKey = DEFAULT_DEMO_KEY;
-        // Auto-save the default key for demo purposes
-        await this.saveSettings(false, DEFAULT_DEMO_KEY);
-        console.log('Using default demo API key. Users can replace it in Settings.');
-      }
     } catch (error) {
       console.warn('Failed to load AI settings:', error);
     }
