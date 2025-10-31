@@ -15,7 +15,7 @@ Repository contents
 - `installation.md` — installation and manual load instructions for Chrome on Windows
 - `CONTRIBUTING.md`, `LICENSE`, `submission.md`
 
-What this submission includes (hackathon requirements)
+What this  includes 
 
 - Application built with required developer tools: Chrome Extension MV3 + Node.js dev scripts
 - Text description of features, functionality, and the problem being solved (this README + `chrome-mnemonic-enhanced.md`)
@@ -40,8 +40,6 @@ Key features (user-facing)
 - **Privacy-first**: Processing prefers client-side built-in APIs and local indexing; fallbacks avoid sending personal data to servers
 
 Which official built-in AI APIs are used and where (concrete integration points)
-
-The hackathon requires use of the built-in client-side APIs (Prompt, Summarizer, Writer/Rewriter, Translator, Proofreader). This project integrates them as follows:
 
 - **Prompt API** — used by the conversational interface to orchestrate multi-turn prompts and maintain context. Also supports multimodal input (text + images) for screenshot analysis. See: `features/conversation.js` and `services/ai-service.js`.
 - **LanguageModel API** — used for natural language processing, conversational AI, and semantic understanding across all features. See: `services/ai-service.js` and `history-page.js`.
@@ -98,8 +96,8 @@ License and repository
 
 This project is released under the MIT License. See `LICENSE` for details.
 
-Repository URL (replace before submission):
-https://github.com/yourusername/chrome-mnemonic
+Repository URL:
+https://github.com/m3lk0rbot/Chrome-Mnemonic
 
 ---
 
@@ -109,7 +107,7 @@ https://github.com/yourusername/chrome-mnemonic
 
 The extension includes a smart **revisit notification system** that enhances user awareness of their browsing patterns:
 
-#### Revisit Notifications (Chrome Canary)
+#### Revisit Notifications (Chrome Canary + Chorme)
 - **Background Detection**: Automatically detects when users revisit pages they've visited before
 - **Visit Tracking**: Shows visit count and displays a list of the latest 5 visit timestamps
 - **Non-Intrusive Toast**: Displays an elegant toast notification in the bottom-right corner without opening the extension
@@ -126,9 +124,9 @@ The notification system currently uses:
 
 **Implementation**: See `background.js` for the revisit notification logic using `chrome.webNavigation` and `chrome.history` APIs.
 
-### Future Enhancements (Post-Hackathon)
+### Future Enhancements
 
-After the hackathon, we plan to enhance the notification system with advanced Chrome AI API capabilities:
+New plan to enhance the notification system with advanced Chrome AI API capabilities:
 
 #### Enhanced AI-Powered Notifications
 - **Detailed Summaries**: Use Chrome AI API (Summarizer, LanguageModel) to generate intelligent summaries of what changed on the page since the last visit
@@ -138,5 +136,6 @@ After the hackathon, we plan to enhance the notification system with advanced Ch
 - **Semantic Matching**: Use Chrome AI to understand related content across different domains, suggesting related pages that might be of interest
 - **Proactive Suggestions**: AI-powered recommendations for continuing research or revisiting related topics based on browsing patterns
 - **Multimodal Analysis**: Use Prompt API with multimodal input to analyze page screenshots and provide visual summaries of changes
+
 
 These enhancements will transform notifications from simple visit trackers into intelligent context-aware assistants that help users stay on top of their browsing activities.
