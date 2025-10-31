@@ -14,7 +14,7 @@ Open PowerShell and run:
 
 ```powershell
 # clone the repo
-git clone https://github.com/yourusername/chrome-mnemonic.git
+git clone https://github.com/m3lk0rbot/Chrome-Mnemonic
 cd "chrome-mnemonic"
 ```
 
@@ -65,5 +65,4 @@ Notes:
 After loading the extension, follow the quick manual smoke tests in `testing.md`.
 
 ---
-
-If you want, I can generate a small `scripts/open-extensions.ps1` helper that opens Chrome and directs you to `chrome://extensions/` and optionally opens the extension popup; note Chrome’s security model requires a manual click to "Load unpacked".
+ 
